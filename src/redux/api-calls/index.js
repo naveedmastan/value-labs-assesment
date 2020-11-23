@@ -7,4 +7,11 @@ const getAboutUsData = () => {
     .catch(() => null);
 };
 
-export default { getAboutUsData };
+const getMenuData = (menuType) => {
+  return axios
+    .get(`http://localhost:4000/data/${menuType}`)
+    .then((response) => response?.data)
+    .catch(() => null);
+};
+
+export default { getAboutUsData, getMenuData };

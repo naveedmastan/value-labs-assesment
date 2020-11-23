@@ -535,7 +535,6 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
     border-radius: 0;
-    color: #fff;
     font-size: 18px;
     margin: 0 15px;
     -webkit-transition: all 0.5s;
@@ -548,6 +547,7 @@ body {
   #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-restaurant-menu .active a:hover,
   #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-restaurant-menu .active a:focus {
     background-color: #FFF;
+    border-bottom: 5px solid #333;
   }
   #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-tab-content-area {
     display: inline;

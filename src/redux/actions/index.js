@@ -18,3 +18,11 @@ export const saveContactForm = (formData) => (dispatch) => {
     formData,
   });
 };
+export const getMenuContent = (menuType) => (dispatch) => {
+  apiCalls.getMenuData(menuType).then((data) => {
+    dispatch({
+      type: types.SET_MENU_DATA,
+      data,
+    });
+  });
+};

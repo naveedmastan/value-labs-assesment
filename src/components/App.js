@@ -18,7 +18,7 @@ function App() {
       <section id="mu-about-us">
         <AboutUs />
       </section>
-      <section id="mu-counter">
+      <section id="mu-restaurant-menu">
         <MenuSection />
       </section>
       <ContactForm />
