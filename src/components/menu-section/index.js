@@ -55,44 +55,39 @@ const MenuSection = () => {
                 <div className="tab-pane fade in active" id="breakfast">
                   <div className="mu-tab-content-area">
                     <div className="row">
-                      {["mu-tab-content-left", "mu-tab-content-right"].map(
-                        (panel) => (
-                          <div key={panel} className="col-md-6">
-                            <div className={panel}>
-                              <ul className="mu-menu-item-nav">
-                                {menuData?.length > 0 ? (
-                                  menuData.map((item) => (
-                                    <li key={item.name + currentTab.id}>
-                                      <div className="media">
-                                        <div className="media-left">
-                                          <a href="#">
-                                            <img
-                                              className="media-object"
-                                              src={menu1}
-                                              alt="img"
-                                            />
-                                          </a>
-                                        </div>
-                                        <div className="media-body">
-                                          <h4 className="media-heading">
-                                            <a href="#">{`${item.name.toUpperCase()}`}</a>
-                                          </h4>
-                                          <span className="mu-menu-price">
-                                            ${item.price}
-                                          </span>
-                                          <p>{item.description}</p>
-                                        </div>
-                                      </div>
-                                    </li>
-                                  ))
-                                ) : (
-                                  <li>No Data Available</li>
-                                )}
-                              </ul>
-                            </div>
-                          </div>
-                        )
-                      )}
+                      <ul className="mu-menu-item-nav col-md-12">
+                        {menuData?.length > 0 ? (
+                          menuData.map((item, i) => (
+                            <li
+                              className="col-md-6"
+                              key={item.name + currentTab.id + i}
+                            >
+                              <div className="media">
+                                <div className="media-left">
+                                  <a href="#">
+                                    <img
+                                      className="media-object"
+                                      src={menu1}
+                                      alt="img"
+                                    />
+                                  </a>
+                                </div>
+                                <div className="media-body">
+                                  <h4 className="media-heading">
+                                    <a href="#">{`${item.name.toUpperCase()}`}</a>
+                                  </h4>
+                                  <span className="mu-menu-price">
+                                    ${item.price}
+                                  </span>
+                                  <p>{item.description}</p>
+                                </div>
+                              </div>
+                            </li>
+                          ))
+                        ) : (
+                          <li>No Data Available</li>
+                        )}
+                      </ul>
                     </div>
                   </div>
                 </div>

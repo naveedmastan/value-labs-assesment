@@ -7,9 +7,10 @@ import img3 from "../../assets/about-us/abtus-img-3.png";
 import img4 from "../../assets/about-us/abtus-img-4.png";
 import img5 from "../../assets/about-us/abtus-img-5.png";
 
-const AboutUs = () => {
+export const AboutUs = () => {
+  console.log("content");
   const content = useSelector((state) => state?.aboutus?.content);
-
+ 
   const dispatch = useDispatch();
   useEffect(() => {
     !content && dispatch(getAboutUsContent());

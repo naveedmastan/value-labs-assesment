@@ -4,7 +4,8 @@ const initialState = {
 
 const actionsMap = {
   SET_MENU_DATA: (state, action) => {
-    const { data = "" } = action;
+    const { data = [] } = action;
+    console.log(action)
     if (!data) {
       return state;
     }
@@ -13,6 +14,7 @@ const actionsMap = {
 };
 
 const menuReducer = (state = initialState, action) => {
+  console.log(action)
   if (actionsMap[action.type]) {
     return actionsMap[action.type](state, action);
   }

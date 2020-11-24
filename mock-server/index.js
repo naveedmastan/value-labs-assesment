@@ -9,5 +9,5 @@ app.get('/data/:name',cors(), (req, resp) => {
     resp.send(response.items)
 })
 app.listen(4000, () => {
-    console.log('=====listening on server')
+    console.log('=====listening on server on 4000 port')
 })
